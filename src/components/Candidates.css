@@ -1,0 +1,40 @@
+.container {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 2;
+  gap: 25px;
+  justify-content: space-evenly;
+}
+
+.container_candidate {
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container_candidate img {
+  height: 130px;
+  width: fit-content;
+}
+
+.container_candidate:hover {
+  transform: scale(1.1);
+}
+
+.container_candidate_button {
+  border-radius: 16px;
+  border: 0px;
+  padding: 8px 12px;
+  background: #275DAD;
+  color: white;
+}
+
+.container_candidate_button:hover {
+  background: #6987C9;
+}
