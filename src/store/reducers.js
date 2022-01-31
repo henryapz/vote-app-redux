@@ -57,11 +57,4 @@ function reducer(state = initialState, action) {
   }
 }
 
-export const fetchTodos = () => async (dispatch) => {
-  try {
-    /* const todos = await getTodos()
-    dispatch(loadTodos(todos)) */
-  } catch (err) {}
-};
-
 export default reducer;
