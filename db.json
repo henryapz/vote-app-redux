@@ -1,0 +1,32 @@
+{
+  "candidates": [
+    {
+      "name": "Candidato 001",
+      "display": true,
+      "votes": 0,
+      "image": "assets/one.png",
+      "id": 1
+    },
+    {
+      "name": "Candidato 002",
+      "display": true,
+      "votes": 0,
+      "image": "assets/two.png",
+      "id": 2
+    },
+    {
+      "name": "Candidato 003",
+      "display": true,
+      "votes": 0,
+      "image": "assets/three.png",
+      "id": 3
+    },
+    {
+      "name": "Candidato 004",
+      "display": true,
+      "votes": 0,
+      "image": "assets/four.png",
+      "id": 4
+    }
+  ]
+}
