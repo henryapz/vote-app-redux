@@ -1,5 +1,10 @@
 import { getCandidates } from "../lib/services";
-import { ADD_VOTE, CHANGE_VIEW_DATA, LOAD_CANDIDATES, UPDATE_FILTER_CANDIDATE } from "./types";
+import {
+  ADD_VOTE,
+  CHANGE_VIEW_DATA,
+  LOAD_CANDIDATES,
+  UPDATE_FILTER_CANDIDATE
+} from "./types";
 
 export const addVotes = (id_candidate) => ({
   type: ADD_VOTE,
@@ -18,7 +23,7 @@ export const setViewData = (param) => ({
 
 export const changeCandidateDisplay = (id, allSelected) => ({
   type: UPDATE_FILTER_CANDIDATE,
-  payload: {id, allSelected}
+  payload: { id, allSelected }
 });
 
 export const fetchCandidates = () => async (dispatch) => {

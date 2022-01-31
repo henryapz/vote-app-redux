@@ -31,10 +31,10 @@
   border-radius: 16px;
   border: 0px;
   padding: 8px 12px;
-  background: #275DAD;
+  background: #275dad;
   color: white;
 }
 
 .container_candidate_button:hover {
-  background: #6987C9;
+  background: #6987c9;
 }

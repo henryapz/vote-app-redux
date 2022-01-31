@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { changeCandidateDisplay, setViewData } from "../store/actions";
-import "./FilterComponent.css"
+import "./FilterComponent.css";
 
 export default function FilterComponent() {
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ export default function FilterComponent() {
   });
 
   const handleChangeSelectCandidate = (id, allSelected) => {
-    dispatch(changeCandidateDisplay(id, allSelected))
+    dispatch(changeCandidateDisplay(id, allSelected));
   };
 
   const handleChangeRadio = (event) => {
@@ -65,7 +65,9 @@ export default function FilterComponent() {
               name={candidate.name}
               value={candidate.id}
               checked={candidate.display}
-              onChange={() => handleChangeSelectCandidate(candidate.id, allSelected)}
+              onChange={() =>
+                handleChangeSelectCandidate(candidate.id, allSelected)
+              }
             />
             <label htmlFor={candidate.id}> {candidate.name} </label>
           </div>
