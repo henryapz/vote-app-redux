@@ -3,11 +3,9 @@ import { useSelector } from "react-redux";
 import "./VotesPerCandidate.css";
 
 export default function VotesPerCandidate() {
-  const candidates = useSelector((state) => state.candidates);
+  const candidates = useSelector((state) => state.candidates.filter((elem) => elem.display));
   const viewValue = useSelector((state) => state.viewValue);
   const totalVotes = useSelector((state) => state.totalVotes);
-
-  const selectedCandidates = candidates.filter((elem) => elem.display);
 
   const getPorcentage = (votes) => {
     if (totalVotes > 0) {
@@ -15,11 +13,11 @@ export default function VotesPerCandidate() {
     }
     return 0;
   };
-  
+
   return (
     <div>
       <ul className="c_list">
-        {selectedCandidates.map((candidate) => (
+        {candidates.map((candidate) => (
           <li key={candidate.id} className="c_list_item">
             {candidate.name}:
             <span className="c_list_item_value">
