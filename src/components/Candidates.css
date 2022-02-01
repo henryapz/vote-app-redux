@@ -33,6 +33,7 @@
   padding: 8px 12px;
   background: #275dad;
   color: white;
+  cursor: pointer;
 }
 
 .container_candidate_button:hover {

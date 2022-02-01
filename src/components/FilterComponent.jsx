@@ -5,6 +5,7 @@ import "./FilterComponent.css";
 
 export default function FilterComponent() {
   const dispatch = useDispatch();
+
   const view = useSelector((state) => state.viewValue);
   const candidates = useSelector((state) => state.candidates);
 
@@ -15,6 +16,15 @@ export default function FilterComponent() {
     }
   });
 
+  const candidateOptions = [
+    {
+      id: "todos",
+      name: "Todos",
+      display: allSelected
+    },
+    ...candidates
+  ];
+
   const handleChangeSelectCandidate = (id, allSelected) => {
     dispatch(changeCandidateDisplay(id, allSelected));
   };
@@ -23,6 +33,7 @@ export default function FilterComponent() {
     const { value } = event.target;
     dispatch(setViewData(value));
   };
+
   return (
     <div className="f-cnt">
       <div className="f-cnt-view">
@@ -48,16 +59,7 @@ export default function FilterComponent() {
       </div>
       <hr />
       <div className="f-cnt-view">
-        <input
-          type="checkbox"
-          id="Todos"
-          name="Todos"
-          value="Todos"
-          checked={allSelected}
-          onChange={() => handleChangeSelectCandidate("todos", allSelected)}
-        />
-        <label htmlFor="Todos">Todos</label>
-        {candidates.map((candidate) => (
+        {candidateOptions.map((candidate) => (
           <div key={candidate.id}>
             <input
               type="checkbox"

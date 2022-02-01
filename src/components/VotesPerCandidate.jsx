@@ -3,7 +3,10 @@ import { useSelector } from "react-redux";
 import "./VotesPerCandidate.css";
 
 export default function VotesPerCandidate() {
-  const { candidates, viewValue, totalVotes } = useSelector((state) => state);
+  const candidates = useSelector((state) => state.candidates);
+  const viewValue = useSelector((state) => state.viewValue);
+  const totalVotes = useSelector((state) => state.totalVotes);
+
   const selectedCandidates = candidates.filter((elem) => elem.display);
 
   const getPorcentage = (votes) => {
@@ -12,6 +15,7 @@ export default function VotesPerCandidate() {
     }
     return 0;
   };
+  
   return (
     <div>
       <ul className="c_list">
